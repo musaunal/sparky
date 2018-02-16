@@ -13,12 +13,24 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
+    public static boolean search(ArrayList<Integer> array1 ,ArrayList<Integer> array2 ,ArrayList<Integer> array3 ,ArrayList<Integer> array4,) {
       System.out.println("inside search");
-      if (array == null) return false;
+      if (array1 == null || array2 == null ||array3 == null ||array4 == null) return false;
 
-      for (int elt : array) {
-        if (elt == e) return true;
+      for (int elt : array1) {
+        if (elt == 0) return true;
+      }
+
+      for (int elt : array2) {
+        if (elt == 0) return true;
+      }
+
+      for (int elt : array3) {
+        if (elt == 0) return true;
+      }
+
+      for (int elt : array4) {
+        if (elt == 0) return true;
       }
       return false;
     }
@@ -36,16 +48,37 @@ public class App
           java.util.Scanner sc1 = new java.util.Scanner(input1);
           sc1.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
-          while (sc1.hasNext())
-          {
+          while (sc1.hasNext()){
             int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList.add(value);
           }
-          System.out.println(inputList);
 
+          String input2 = req.queryParams("input2");
+          java.util.Scanner sc2 = new java.util.Scanner(input2);
+          sc1.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+          while (sc2.hasNext()){
+            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            inputList.add(value);
+          }
 
-          String input2 = req.queryParams("input2").replaceAll("\\s","");
-          int input2AsInt = Integer.parseInt(input2);
+          String input3 = req.queryParams("input3");
+          java.util.Scanner sc3 = new java.util.Scanner(input3);
+          sc3.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+          while (sc3.hasNext()){
+            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            inputList.add(value);
+          }
+
+          String input4 = req.queryParams("input4");
+          java.util.Scanner sc4 = new java.util.Scanner(input4);
+          sc4.useDelimiter("[;\r\n]+");
+          java.util.ArrayList<Integer> inputList = new java.util.ArrayList<>();
+          while (sc4.hasNext()){
+            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            inputList.add(value);
+          }
 
           boolean result = App.search(inputList, input2AsInt);
 
