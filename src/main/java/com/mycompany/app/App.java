@@ -48,7 +48,13 @@ public class App{
           sc1.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList1 = new java.util.ArrayList<>();
           while (sc1.hasNext()){
-            int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            int value = -1;
+            try {
+              value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
+            } catch (NumberFormatException e) {
+              System.out.println("Wrong number");
+              value = -1;
+            }
             inputList1.add(value);
           }
 
@@ -57,8 +63,13 @@ public class App{
           sc2.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
           while (sc2.hasNext()){
-            int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
-            inputList2.add(value);
+            int value = -1;
+            try {
+              value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
+            } catch (NumberFormatException e) {
+              System.out.println("Wrong number");
+              value = -1;
+            }inputList2.add(value);
           }
 
           String input3 = req.queryParams("input3");
@@ -66,8 +77,13 @@ public class App{
           sc3.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList3 = new java.util.ArrayList<>();
           while (sc3.hasNext()){
-            int value = Integer.parseInt(sc3.next().replaceAll("\\s",""));
-            inputList3.add(value);
+            int value = -1;
+            try {
+              value = Integer.parseInt(sc3.next().replaceAll("\\s",""));
+            } catch (NumberFormatException e) {
+              System.out.println("Wrong number");
+              value = -1;
+            }inputList3.add(value);
           }
 
           String input4 = req.queryParams("input4");
@@ -75,7 +91,13 @@ public class App{
           sc4.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList4 = new java.util.ArrayList<>();
           while (sc4.hasNext()){
-            int value = Integer.parseInt(sc4.next().replaceAll("\\s",""));
+            int value = -1;
+            try {
+              value = Integer.parseInt(sc4.next().replaceAll("\\s",""));
+            } catch (NumberFormatException e) {
+              System.out.println("Wrong number");
+              value = -1;
+            }
             inputList4.add(value);
           }
 
